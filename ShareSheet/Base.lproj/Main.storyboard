@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Share Sheet View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ShareSheetViewController" customModule="ShareSheet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rn-fk-LkH">
+                                <rect key="frame" x="161" y="318" width="53" height="30"/>
+                                <state key="normal" title="Present"/>
+                                <connections>
+                                    <action selector="presentWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s5Z-vF-ZZo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Houses" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-fH-oo2">
+                                <rect key="frame" x="8" y="94.5" width="359" height="191.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vd4-fH-oo2" secondAttribute="height" multiplier="15:8" id="QOf-xz-i03"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These are some nice houses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo9-il-bok">
+                                <rect key="frame" x="78.5" y="57.5" width="218" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vd4-fH-oo2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="461-8t-DA7"/>
+                            <constraint firstItem="6rn-fk-LkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7L1-dH-JrB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vd4-fH-oo2" secondAttribute="trailing" constant="8" id="GtS-OV-WJx"/>
+                            <constraint firstItem="Wo9-il-bok" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S80-6z-Bra"/>
+                            <constraint firstItem="Vd4-fH-oo2" firstAttribute="top" secondItem="Wo9-il-bok" secondAttribute="bottom" constant="16" id="W6i-k2-Jnp"/>
+                            <constraint firstItem="6rn-fk-LkH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tMS-h9-DeF"/>
+                            <constraint firstItem="6rn-fk-LkH" firstAttribute="top" secondItem="Vd4-fH-oo2" secondAttribute="bottom" constant="32" id="z6I-Ul-xTP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="exampleImageView" destination="Vd4-fH-oo2" id="L04-lu-UIx"/>
+                        <outlet property="exampleLabel" destination="Wo9-il-bok" id="P9v-zy-BAQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Houses" width="790" height="400"/>
+    </resources>
+</document>
